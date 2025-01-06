@@ -5,8 +5,8 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({
-      pages: "../neobrutal",
-      assets: "../neobrutal",
+      pages: "./build",
+      assets: "./build",
       fallback: undefined,
       precompress: false,
       strict: true
