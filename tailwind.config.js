@@ -28,7 +28,13 @@ export default {
             1: "hsl(var(--ws-2) / <alpha-value> )",
             2: "hsl(var(--ws-3) / <alpha-value> )",
             3: "hsl(var(--ws-4) / <alpha-value> )",
-            4: "hsl(var(--ws-5) / <alpha-value> )"
+            4: "hsl(var(--ws-5) / <alpha-value> )",
+            5: "hsl(var(--ws-6) / <alpha-value> )",
+            6: "hsl(var(--ws-7) / <alpha-value> )",
+            7: "hsl(var(--ws-8) / <alpha-value> )",
+            8: "hsl(var(--ws-9) / <alpha-value> )",
+            9: "hsl(var(--ws-10) / <alpha-value> )",
+            "empty": "hsl(var(--ws-empty) / <alpha-value> )"
           },
           "tiling-direction": "hsl(var(--tiling-direction) / <alpha-value> )",
           spotify: {
@@ -81,6 +87,12 @@ export default {
     "text-zb-ws-2",
     "text-zb-ws-3",
     "text-zb-ws-4",
+    "text-zb-ws-5",
+    "text-zb-ws-6",
+    "text-zb-ws-7",
+    "text-zb-ws-8",
+    "text-zb-ws-9",
+    "text-zb-ws-empty",
     "justify-self-start",
     "justify-self-center",
     "justify-self-end"

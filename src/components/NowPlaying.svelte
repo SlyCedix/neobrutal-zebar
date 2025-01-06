@@ -1,11 +1,14 @@
 <script lang="ts">
   import type { GlazeWmOutput } from "zebar";
 
-  let { glazewm }: { glazewm: GlazeWmOutput } = $props();
+  let { glazewm, className }: { glazewm: GlazeWmOutput; className: string } =
+    $props();
 </script>
 
-{#if glazewm}
-  <div class="flex items-center gap-1">
+{#if glazewm?.allWorkspaces
+  .flatMap((ws) => ws.children)
+  .filter((ch) => ch.type == "window" && ch.processName.toLowerCase() == "spotify").length}
+  <div class="flex items-center gap-1 {className}">
     {#each glazewm.allWorkspaces as workspace}
       {#each workspace.children as child}
         {#if child.type == "window" && child.processName.toLowerCase() === "spotify"}
