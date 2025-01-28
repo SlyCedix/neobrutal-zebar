@@ -49,7 +49,7 @@
   },
   {
     "iconName": "ti-spy",
-    "appNames": ["azure vpn client", "AutoHotkey Window Spy", "ProtonVPN", "clash-verge"]
+    "appNames": ["azure vpn client", "AutoHotkey Window Spy", "ProtonVPN", "clash-verge", "WinSpy64"]
   },
   {
     "iconName": "ti-screenshot",
@@ -150,5 +150,17 @@
   {
     "iconName": "ti-brand-android",
     "appNames": ["MuMuPlayer"]
+  },
+  {
+    "iconName": "ti-brand-xdeep",
+    "appNames": ["mplab_ide64"]
+  },
+  {
+    "iconName": "ti-chart-bar-popular",
+    "appNames": ["ESIMRP"]
+  },
+  {
+    "iconName": "ti-graph",
+    "appNames": ["Taskmgr"]
   }
 ]
