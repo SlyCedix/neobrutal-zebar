@@ -14,7 +14,9 @@
 </script>
 
 <div class="flex flex-row items-center divide-x-[1px] divide-dashed">
-  <Button class="text-zb-icon mx-1.5" iconClass="heart-filled" />
+  <Button class="text-zb-icon mx-1.5">
+    <i class="ti ti-cat"></i>
+  </Button>
   <div class="flex gap-1 items-center px-1.5">
     <i class="ti ti-ruler-2"></i>
     <Meter class="bg-zb-memory" percent={Math.round(memory?.usage ?? 0)} />

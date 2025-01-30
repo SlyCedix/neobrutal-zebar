@@ -31,13 +31,34 @@
   <div class="flex flex-row gap-2 items-center">
     {#each glazewm.currentWorkspaces as workspace, i}
       <Button
-        iconClass="ti {workspace.hasFocus ? 'ti-point-filled' : 'ti-point'}"
         class={workspace.children.length
           ? "text-zb-ws-" + i
           : "text-zb-ws-empty"}
         callback={() =>
           glazewm!.runCommand(`focus --workspace ${workspace.name}`)}
-      />
+      >
+        {@const icons = workspace.children
+          .map((c) => c as Window)
+          .filter((w) => w !== null)
+          .map((w) => [getProcessIcon(w), w.hasFocus])
+          .filter((p) => p[0] !== null)}
+        {console.log(icons)}
+        {#if !icons.length}
+          <i class="ti {workspace.hasFocus ? 'ti-point-filled' : 'ti-point'}"
+          ></i>
+        {/if}
+        {#each icons as pairs}
+          <span
+            class={pairs[1]
+              ? "text-zb-focused-process"
+              : workspace.hasFocus
+                ? "text-zb-process"
+                : ""}
+          >
+            <i class="ti {pairs[0]}"></i>
+          </span>
+        {/each}
+      </Button>
     {/each}
     <button
       aria-label="tiling-direction"
@@ -60,23 +81,5 @@
         </button>
       </div>
     {/each}
-    <div class="flex items-center gap-1">
-      {#if glazewm.focusedWorkspace}
-        {#each glazewm.focusedWorkspace!.children as child}
-          {#if child.type == "window" && child.state.type != "minimized"}
-            {@const icon = getProcessIcon(child as Window)}
-            {#if icon}
-              <span
-                class={child.hasFocus
-                  ? "text-zb-focused-process"
-                  : "text-zb-process"}
-              >
-                <i class="ti {icon}"></i>
-              </span>
-            {/if}
-          {/if}
-        {/each}
-      {/if}
-    </div>
   </div>
 {/if}

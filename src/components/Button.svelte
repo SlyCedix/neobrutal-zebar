@@ -1,11 +1,11 @@
 <script lang="ts">
   type ButtonProps = {
-    iconClass: string;
     label?: string;
+    children?: CallableFunction;
     callback?: () => void;
     class: string;
   };
-  let { iconClass, label, callback, ...rest }: ButtonProps = $props();
+  let { label, children, callback, ...rest }: ButtonProps = $props();
 </script>
 
 <button
@@ -13,5 +13,5 @@
   onclick={callback}
   aria-label={label}
 >
-  <i class="ti ti-{iconClass}"></i>
+  {@render children?.()}
 </button>

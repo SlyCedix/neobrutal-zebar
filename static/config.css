@@ -31,7 +31,7 @@
   --battery-mid: var(--ctp-mocha-peach);
   --battery-low: var(--ctp-mocha-red);
   --focused-process: var(--ctp-mocha-text);
-  --process: var(--ctp-mocha-surface2);
+  --process: var(--ctp-mocha-surface0);
   --displayed: var(--ctp-mocha-text);
   --ws-1: var(--ctp-mocha-pink);
   --ws-2: var(--ctp-mocha-red);
