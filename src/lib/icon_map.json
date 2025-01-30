@@ -162,5 +162,13 @@
   {
     "iconName": "ti-graph",
     "appNames": ["Taskmgr"]
+  },
+  {
+    "iconName": "ti-cpu",
+    "appNames": ["kicad"]
+  },
+  {
+    "iconName": "ti-circuit-diode",
+    "appNames": ["LTspice"]
   }
 ]
